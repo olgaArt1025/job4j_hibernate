@@ -24,6 +24,37 @@ public class HbmRun {
             session.save(two);
             session.save(three);
 
+            /*
+            Query query = session.createQuery("from Candidate");
+            for (Object cn : query.list()) {
+                System.out.println(cn);
+            }
+
+            Query query = session.createQuery("from Candidate с where с.id = 1");
+            System.out.println(query.uniqueResult());
+
+            Query query = session.createQuery("from Candidate s where s.name = :fName");
+            query.setParameter("fName", "Alex");
+            System.out.println(query.uniqueResult());
+
+            session.createQuery("update Candidate s set s.experience = :newExperience," +
+                            " s.salary = :newSalary where s.id = :fId")
+                    .setParameter("newExperience", "Middle Java")
+                    .setParameter("newSalary", 140000)
+                    .setParameter("fId", 1)
+                    .executeUpdate();
+
+            session.createQuery("delete from Candidate c where c.name = :fName")
+                    .setParameter("fName", "Mihail")
+                    .executeUpdate();
+
+            session.createQuery("insert into Candidate (name, experience, salary) "
+                            + "select s.name, s.experience, s.salary+100000  "
+                            + "from Candidate s where s.id = :fId")
+                    .setParameter("fId", 1)
+                    .executeUpdate();
+            */
+
             session.getTransaction().commit();
             session.close();
         }  catch (Exception e) {
