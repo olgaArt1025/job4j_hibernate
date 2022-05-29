@@ -24,5 +24,7 @@
         <mapping class="ru.job4j.manytomany.Book"/>
         <mapping class="ru.job4j.lazy.ModelCar"/>
         <mapping class="ru.job4j.lazy.BrandCar"/>
+        <mapping class="ru.job4j.hql.Vacancy"/>
+        <mapping class="ru.job4j.hql.DBVacancy"/>
     </session-factory>
 </hibernate-configuration>
